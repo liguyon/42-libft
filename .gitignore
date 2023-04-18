@@ -1,3 +1,6 @@
 a.out
 test*
 *test
+*.a
+*.o
+main.c

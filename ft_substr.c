@@ -6,7 +6,7 @@
 /*   By: liguyon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 14:57:02 by liguyon           #+#    #+#             */
-/*   Updated: 2023/04/17 16:30:40 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/04/18 07:23:50 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	res[i] = '\0';
 	return (res);
 }
-/*
-#include <stdio.h>
-int	main()
-{
-	char const	*s = "Helloworldblabla";
-	char	*str = ft_substr(s, 5, 6);
-	printf("%s\n", str);
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: liguyon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 14:01:18 by liguyon           #+#    #+#             */
-/*   Updated: 2023/04/17 15:07:11 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/04/18 07:06:14 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,15 +31,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (0);
 }
-/*
-#include <stdio.h>
-#include <bsd/string.h>
-int	main()
-{
-	const char	*big = NULL;
-	const char	*little = NULL;
-	size_t		len = 8;
-	printf("%s\n", strnstr(big, little, len));
-	printf("%s\n", ft_strnstr(big, little, len));
-}
-*/

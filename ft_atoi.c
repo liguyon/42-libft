@@ -6,7 +6,7 @@
 /*   By: liguyon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 15:46:29 by liguyon           #+#    #+#             */
-/*   Updated: 2023/04/12 15:55:03 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/04/18 06:08:53 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return (sign * res);
 }
-/*
-#include <stdio.h>
-int	main()
-{
-	printf("%d\n", atoi("  +125"));
-	printf("%d\n", ft_atoi("  +125"));
-}
-*/

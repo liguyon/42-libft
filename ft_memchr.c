@@ -6,7 +6,7 @@
 /*   By: liguyon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 13:41:02 by liguyon           #+#    #+#             */
-/*   Updated: 2023/04/17 15:44:44 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/04/18 06:26:46 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-/*
-#include <stdio.h>
-int main()
-{
-	const char *s = "";
-	char c = 'y';
-	size_t n = 60;
-	printf("%s\n", (char *)memchr(s, c, n));
-	printf("%s\n", (char *)ft_memchr(s, c, n));
-}
-*/
