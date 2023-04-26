@@ -6,13 +6,13 @@
 /*   By: liguyon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 15:02:31 by liguyon           #+#    #+#             */
-/*   Updated: 2023/04/17 15:03:02 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/04/26 16:28:27 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	in_set(char c, char const *set)
+static int	in_set(char c, char const *set)
 {
 	int	i;
 

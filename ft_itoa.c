@@ -6,13 +6,13 @@
 /*   By: liguyon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 15:37:11 by liguyon           #+#    #+#             */
-/*   Updated: 2023/04/24 21:04:29 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/04/26 16:27:56 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	itoa_len(int n)
+static int	itoa_len(int n)
 {
 	int		itoa_len;
 	long	nb;
@@ -34,7 +34,7 @@ int	itoa_len(int n)
 	return (itoa_len);
 }
 
-void	itoa_alt(int n, int len, char *res)
+static void	itoa_alt(int n, int len, char *res)
 {
 	long	nb;
 	int		i;

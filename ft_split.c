@@ -6,13 +6,13 @@
 /*   By: liguyon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 15:04:48 by liguyon           #+#    #+#             */
-/*   Updated: 2023/04/17 15:15:17 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/04/26 16:29:11 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_free_iter(char **res, int index)
+static char	**ft_free_iter(char **res, int index)
 {
 	while (--index >= 0)
 		free(res[index]);
@@ -20,7 +20,7 @@ char	**ft_free_iter(char **res, int index)
 	return (NULL);
 }
 
-char	**make_array_split(char const *s, char c)
+static char	**make_array_split(char const *s, char c)
 {
 	int		i;
 	int		size;
@@ -46,7 +46,7 @@ char	**make_array_split(char const *s, char c)
 	return (res);
 }
 
-char	**ft_split_alt(char const *s, char c, char **res)
+static char	**ft_split_alt(char const *s, char c, char **res)
 {
 	int	i;
 	int	j;
