@@ -6,7 +6,7 @@
 #    By: liguyon <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/11 11:03:52 by liguyon           #+#    #+#              #
-#    Updated: 2023/04/12 16:37:18 by liguyon          ###   ########.fr        #
+#    Updated: 2023/04/24 21:02:02 by liguyon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,6 +48,7 @@ SRC		= ft_toupper.c \
 		  ft_putstr_fd.c \
 		  ft_putendl_fd.c \
 		  ft_putnbr_fd.c \
+		  ft_strrev.c \
 
 SRC_BONUS	= ft_lstnew.c \
 		  ft_lstadd_front.c \

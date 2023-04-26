@@ -6,31 +6,11 @@
 /*   By: liguyon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 15:37:11 by liguyon           #+#    #+#             */
-/*   Updated: 2023/04/17 15:46:46 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/04/24 21:04:29 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	ft_strrev(char *str, int len)
-{
-	int		i;
-	int		j;
-	char	tmp;
-
-	if (str)
-	{
-		i = -1;
-		j = len - 1;
-		while (++i < len / 2)
-		{
-			tmp = str[i];
-			str[i] = str[j];
-			str[j] = tmp;
-			j--;
-		}
-	}
-}
 
 int	itoa_len(int n)
 {
@@ -72,7 +52,7 @@ void	itoa_alt(int n, int len, char *res)
 		res[++i] = nb % 10 + '0';
 		nb /= 10;
 	}
-	ft_strrev(res, len);
+	ft_strrev(res);
 }
 
 char	*ft_itoa(int n)
