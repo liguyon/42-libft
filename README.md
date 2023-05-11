@@ -10,11 +10,13 @@ To use the library, first compile it using the provided Makefile. You can then l
 
 - `ft_bzero`
 - `ft_calloc`
+- `ft_memblock`
 - `ft_memchr`
 - `ft_memcmp`
 - `ft_memcpy`
 - `ft_memmove`
 - `ft_memset`
+- `ft_realloc`
 
 ### String functions
 
