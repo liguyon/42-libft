@@ -11,81 +11,83 @@
 # **************************************************************************** #
 
 # Output
-NAME		= libft.a
+NAME		:= libft.a
+
+# Includes
+INC_DIR		:= include
 
 # Sources
-SRC		= ft_toupper.c \
-		  ft_tolower.c \
-		  ft_strchr.c \
-		  ft_strrchr.c \
-		  ft_strncmp.c \
-		  ft_memchr.c \
-		  ft_memcmp.c \
-		  ft_strnstr.c \
-		  ft_atoi.c \
-		  ft_isalpha.c \
-		  ft_isdigit.c \
-		  ft_isalnum.c \
-		  ft_isascii.c \
-		  ft_isprint.c \
-		  ft_strlen.c \
-		  ft_memset.c \
-		  ft_bzero.c \
-		  ft_memcpy.c \
-		  ft_memmove.c \
-		  ft_strlcpy.c \
-		  ft_strlcat.c \
-		  ft_calloc.c \
-		  ft_strdup.c \
-		  ft_substr.c \
-		  ft_strjoin.c \
-		  ft_strtrim.c \
-		  ft_split.c \
-		  ft_itoa.c \
-		  ft_strmapi.c \
-		  ft_striteri.c \
-		  ft_putchar_fd.c \
-		  ft_putstr_fd.c \
-		  ft_putendl_fd.c \
-		  ft_putnbr_fd.c \
-		  ft_strrev.c \
+SRC_DIR		:= src
+SRC_		:= memory/ft_bzero.c \
+		   memory/ft_calloc.c \
+		   memory/ft_memchr.c \
+		   memory/ft_memcmp.c \
+		   memory/ft_memcpy.c \
+		   memory/ft_memmove.c \
+		   memory/ft_memset.c \
+		   string/ft_atoi.c \
+		   string/ft_itoa.c \
+		   string/ft_split.c \
+		   string/ft_strchr.c \
+		   string/ft_strdup.c \
+		   string/ft_striteri.c \
+		   string/ft_strjoin.c \
+		   string/ft_strlcat.c \
+		   string/ft_strlcpy.c \
+		   string/ft_strlen.c \
+		   string/ft_strmapi.c \
+		   string/ft_strncmp.c \
+		   string/ft_strnstr.c \
+		   string/ft_strrchr.c \
+		   string/ft_strrev.c \
+		   string/ft_strtrim.c \
+		   string/ft_substr.c \
+		   character/ft_isalnum.c \
+		   character/ft_isalpha.c \
+		   character/ft_isascii.c \
+		   character/ft_isdigit.c \
+		   character/ft_isprint.c \
+		   character/ft_tolower.c \
+		   character/ft_toupper.c \
+		   write/ft_putchar_fd.c \
+		   write/ft_putendl_fd.c \
+		   write/ft_putnbr_fd.c \
+		   write/ft_putstr_fd.c \
+		   linked_list/ft_lstnew.c \
+		   linked_list/ft_lstadd_front.c \
+		   linked_list/ft_lstsize.c \
+		   linked_list/ft_lstlast.c \
+		   linked_list/ft_lstadd_back.c \
+		   linked_list/ft_lstdelone.c \
+		   linked_list/ft_lstclear.c \
+		   linked_list/ft_lstiter.c \
+		   linked_list/ft_lstmap.c \
 
-SRC_BONUS	= ft_lstnew.c \
-		  ft_lstadd_front.c \
-		  ft_lstsize.c \
-		  ft_lstlast.c \
-		  ft_lstadd_back.c \
-		  ft_lstdelone.c \
-		  ft_lstclear.c \
-		  ft_lstiter.c \
-		  ft_lstmap.c \
+SRC		:= $(addprefix $(SRC_DIR)/, $(SRC_))
+
+# Objects
+OBJ_DIR		:= build
+OBJ		:= $(addprefix $(OBJ_DIR)/, $(SRC_:.c=.o))
 
 # Compiler
-CC		= cc
-CFLAGS		= -Wall -Wextra -Werror
+CC		:= cc
+CFLAGS		:= -Wall -Wextra -Werror -I $(INC_DIR)
 
 # Archive
-AR		= ar
-ARFLAGS		= -rc
-
-OBJ		= $(SRC:.c=.o)
-OBJ_BONUS	= $(SRC_BONUS:.c=.o)
-
-
+AR		:= ar
+ARFLAGS		:= -rc
 
 $(NAME):	$(OBJ)
 		$(AR) $(ARFLAGS) $@ $^
 
 all:		$(NAME)
 
-bonus:		$(OBJ) $(OBJ_BONUS)
-		ar -rc $(NAME) $^
-
-%.o:		%.c
-		$(CC) $(CFLAGS) -o $@ -c $< -I.
+$(OBJ_DIR)/%.o:	$(SRC_DIR)/%.c
+		@mkdir -p $(dir $@)
+		$(CC) $(CFLAGS) -o $@ -c $<
 
 clean:
-		rm -f $(OBJ) $(OBJ_BONUS)
+		rm -rf $(OBJ_DIR) 
 
 fclean:		clean
 		rm -f $(NAME)

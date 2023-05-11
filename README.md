@@ -10,7 +10,6 @@ To use the library, first compile it using the provided Makefile. You can then l
 
 - `ft_bzero`
 - `ft_calloc`
-- `ft_memccpy`
 - `ft_memchr`
 - `ft_memcmp`
 - `ft_memcpy`
@@ -47,7 +46,7 @@ To use the library, first compile it using the provided Makefile. You can then l
 - `ft_tolower`
 - `ft_toupper`
 
-### Writing functions
+### Write functions
 
 - `ft_putchar_fd`
 - `ft_putendl_fd`
