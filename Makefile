@@ -20,11 +20,13 @@ INC_DIR		:= include
 SRC_DIR		:= src
 SRC_		:= memory/ft_bzero.c \
 		   memory/ft_calloc.c \
+		   memory/ft_memblock.c \
 		   memory/ft_memchr.c \
 		   memory/ft_memcmp.c \
 		   memory/ft_memcpy.c \
 		   memory/ft_memmove.c \
 		   memory/ft_memset.c \
+		   memory/ft_realloc.c \
 		   string/ft_atoi.c \
 		   string/ft_itoa.c \
 		   string/ft_split.c \
