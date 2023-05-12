@@ -52,6 +52,7 @@ SRC_		:= memory/ft_bzero.c \
 		   character/ft_isprint.c \
 		   character/ft_tolower.c \
 		   character/ft_toupper.c \
+		   write/ft_print_error.c \
 		   write/ft_putchar_fd.c \
 		   write/ft_putendl_fd.c \
 		   write/ft_putnbr_fd.c \
