@@ -18,6 +18,7 @@ Libft is a library of C functions implemented as part of the curriculum at 42 sc
 ### String functions
 
 - `ft_atoi`
+- `ft_atol`
 - `ft_itoa`
 - `ft_split`
 - `ft_strchr`
@@ -47,6 +48,7 @@ Libft is a library of C functions implemented as part of the curriculum at 42 sc
 
 ### Write functions
 
+- `ft_print_error`
 - `ft_putchar_fd`
 - `ft_putendl_fd`
 - `ft_putnbr_fd`
