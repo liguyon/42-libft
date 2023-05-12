@@ -80,6 +80,6 @@ void    *ft_realloc(void *ptr, size_t size);
 t_memblock	*ft_memblock_init(size_t size);
 void	*ft_memblock_add(t_memblock *block, size_t size);
 void	ft_memblock_free(t_memblock *block);
-int		ft_print_error(int error_code, const char *message);
+void	ft_print_error(char const *message);
 
 #endif

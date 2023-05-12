@@ -1,6 +1,6 @@
 #include "libft.h"
 
-int	ft_print_error(int error_code, const char *message)
+void	ft_print_error(char const *message)
 {
     const char	*color_start = ANSI_COLOR_RED;
     const char	*color_reset = ANSI_COLOR_RESET;
@@ -9,5 +9,4 @@ int	ft_print_error(int error_code, const char *message)
 	write(fd, color_start, ft_strlen(color_start));
 	write(fd, message, ft_strlen(message));
 	write(fd, color_start, ft_strlen(color_reset));
-	return (error_code);
 }
