@@ -1,9 +1,6 @@
 # Libft
 Libft is a library of C functions implemented as part of the curriculum at 42 school. It includes both standard and additional C functions for memory allocation, string manipulation, character handling, and more.
 
-## Getting started
-To use the library, first compile it using the provided Makefile. You can then link it to your own programs by adding `-L./libft -lft` to your compilation command and  including the header file `libft.h`.
-
 ## Functions
 
 ### Memory functions
