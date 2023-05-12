@@ -28,6 +28,7 @@ SRC_		:= memory/ft_bzero.c \
 		   memory/ft_memset.c \
 		   memory/ft_realloc.c \
 		   string/ft_atoi.c \
+		   string/ft_atol.c \
 		   string/ft_itoa.c \
 		   string/ft_split.c \
 		   string/ft_strchr.c \
