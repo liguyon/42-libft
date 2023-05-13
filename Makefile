@@ -66,6 +66,10 @@ SRC_		:= memory/ft_bzero.c \
 		   linked_list/ft_lstclear.c \
 		   linked_list/ft_lstiter.c \
 		   linked_list/ft_lstmap.c \
+		   ft_printf/ft_printf_hex.c \
+		   ft_printf/ft_printf_ptr.c \
+		   ft_printf/ft_printf_uint.c \
+		   ft_printf/ft_printf.c \
 
 SRC		:= $(addprefix $(SRC_DIR)/, $(SRC_))
 
