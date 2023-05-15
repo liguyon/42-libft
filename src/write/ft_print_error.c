@@ -23,5 +23,5 @@ void	ft_print_error(char const *message)
 	color_reset = ANSI_COLOR_RESET;
 	write(fd, color_start, ft_strlen(color_start));
 	write(fd, message, ft_strlen(message));
-	write(fd, color_start, ft_strlen(color_reset));
+	write(fd, color_reset, ft_strlen(color_reset));
 }
