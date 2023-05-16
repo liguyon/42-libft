@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 #include <inttypes.h>
 
 static void	ft_putptr_fd(uintptr_t ptr, int fd)

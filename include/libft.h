@@ -81,5 +81,12 @@ void		*ft_realloc(void *ptr, size_t size);
 void		*ft_memblock_add(t_memblock *block, size_t size);
 void		ft_memblock_free(t_memblock *block);
 void		ft_print_error(char const *message);
+// printf
+int			ft_printf_str(char *str);
+int			ft_printf_nbr(int nbr);
+int			ft_printf_uint(unsigned int nbr);
+int			ft_printf_ptr(void *ptr);
+int			ft_printf_hex(unsigned int nbr, char fmt);
+int			ft_printf(const char *fmt, ...);
 
 #endif

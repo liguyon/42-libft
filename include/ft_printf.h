@@ -21,7 +21,6 @@ int	ft_printf_nbr(int nbr);
 int	ft_printf_uint(unsigned int nbr);
 int	ft_printf_ptr(void *ptr);
 int	ft_printf_hex(unsigned int nbr, char fmt);
-int	ft_printf_fmt(char fmt, va_list pa);
 int	ft_printf(const char *fmt, ...);
 
 #endif
