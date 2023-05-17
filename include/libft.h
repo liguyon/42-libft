@@ -82,6 +82,7 @@ void		*ft_realloc(void *ptr, size_t size);
 void		*ft_memblock_add(t_memblock *block, size_t size);
 void		ft_memblock_free(t_memblock *block);
 void		ft_print_error(char const *message);
+char		*ft_strtok(char *str, const char *delim);
 // printf
 int			ft_printf_str(char *str);
 int			ft_printf_nbr(int nbr);

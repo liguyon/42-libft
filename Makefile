@@ -43,6 +43,7 @@ SRC_		:= stdlib/ft_calloc.c \
 		   string/ft_strnstr.c \
 		   string/ft_strrchr.c \
 		   string/ft_strrev.c \
+		   string/ft_strtok.c \
 		   string/ft_strtrim.c \
 		   string/ft_substr.c \
 		   ctype/ft_isalnum.c \
