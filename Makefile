@@ -49,6 +49,7 @@ SRC_		:= stdlib/ft_calloc.c \
 		   ctype/ft_isalpha.c \
 		   ctype/ft_isascii.c \
 		   ctype/ft_isdigit.c \
+		   ctype/ft_isspace.c \
 		   ctype/ft_isprint.c \
 		   ctype/ft_tolower.c \
 		   ctype/ft_toupper.c \
