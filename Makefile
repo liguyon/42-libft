@@ -6,7 +6,7 @@
 #    By: liguyon <liguyon@student.42lehavre.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/11 11:03:52 by liguyon           #+#    #+#              #
-#    Updated: 2023/06/06 14:36:05 by liguyon          ###   ########.fr        #
+#    Updated: 2023/06/06 15:05:05 by liguyon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,18 +85,10 @@ CFLAGS		:= -Wall -Wextra -Werror -I $(INC_DIR)
 # Archive
 AR			:= ar rcs
 
-# Logging
-SUCCESS_COLOR	= \033[0;32m
-ERROR_COLOR		= \033[0;31m
-RESET_COLOR		= \033[0m
-COMPILE_MSG		= "Compiling target: "
-SUCCESS_MSG		= "Compilation successful: "
-
 # Targets
 $(NAME):	$(OBJ)
-		@$(AR) $@ $^
-		@ranlib $@
-		@echo "$(SUCCESS_COLOR)$(SUCCESS_MSG)$(NAME)$(RESET_COLOR)"
+		$(AR) $@ $^
+		ranlib $@
 
 all:	$(NAME)
 
@@ -105,12 +97,10 @@ $(OBJ_DIR)/%.o:	$(SRC_DIR)/%.c
 		$(CC) $(CFLAGS) -o $@ -c $<
 
 clean:
-		@echo "Cleaning up..."
-		@rm -rf $(OBJ_DIR)
-		@echo "$(SUCCESS_COLOR)Done$(RESET_COLOR)"
+		rm -rf $(OBJ_DIR)
 
 fclean:	clean
-		@rm -f $(NAME)
+		rm -f $(NAME)
 
 re: 		fclean all
 
