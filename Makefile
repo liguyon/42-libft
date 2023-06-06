@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: liguyon <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: liguyon <liguyon@student.42lehavre.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/11 11:03:52 by liguyon           #+#    #+#              #
-#    Updated: 2023/04/24 21:02:02 by liguyon          ###   ########.fr        #
+#    Updated: 2023/06/06 14:36:05 by liguyon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,6 @@ INC_DIR		:= include
 # Sources
 SRC_DIR		:= src
 SRC_		:= stdlib/ft_calloc.c \
-		   stdlib/ft_memblock.c \
 		   stdlib/ft_realloc.c \
 		   stdlib/ft_atoi.c \
 		   stdlib/ft_atol.c \
@@ -73,34 +72,45 @@ SRC_		:= stdlib/ft_calloc.c \
 		   stdio/ft_printf_uint.c \
 		   stdio/ft_printf.c \
 
-SRC		:= $(addprefix $(SRC_DIR)/, $(SRC_))
+SRC			:= $(addprefix $(SRC_DIR)/, $(SRC_))
 
 # Objects
-OBJ_DIR		:= build
-OBJ		:= $(addprefix $(OBJ_DIR)/, $(SRC_:.c=.o))
+OBJ_DIR		:= .build
+OBJ			:= $(addprefix $(OBJ_DIR)/, $(SRC_:.c=.o))
 
 # Compiler
-CC		:= cc
+CC			:= cc
 CFLAGS		:= -Wall -Wextra -Werror -I $(INC_DIR)
 
 # Archive
-AR		:= ar
-ARFLAGS		:= -rc
+AR			:= ar rcs
 
+# Logging
+SUCCESS_COLOR	= \033[0;32m
+ERROR_COLOR		= \033[0;31m
+RESET_COLOR		= \033[0m
+COMPILE_MSG		= "Compiling target: "
+SUCCESS_MSG		= "Compilation successful: "
+
+# Targets
 $(NAME):	$(OBJ)
-		$(AR) $(ARFLAGS) $@ $^
+		@$(AR) $@ $^
+		@ranlib $@
+		@echo "$(SUCCESS_COLOR)$(SUCCESS_MSG)$(NAME)$(RESET_COLOR)"
 
-all:		$(NAME)
+all:	$(NAME)
 
 $(OBJ_DIR)/%.o:	$(SRC_DIR)/%.c
 		@mkdir -p $(dir $@)
 		$(CC) $(CFLAGS) -o $@ -c $<
 
 clean:
-		rm -rf $(OBJ_DIR) 
+		@echo "Cleaning up..."
+		@rm -rf $(OBJ_DIR)
+		@echo "$(SUCCESS_COLOR)Done$(RESET_COLOR)"
 
-fclean:		clean
-		rm -f $(NAME)
+fclean:	clean
+		@rm -f $(NAME)
 
 re: 		fclean all
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: liguyon <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: liguyon <liguyon@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 11:36:48 by liguyon           #+#    #+#             */
-/*   Updated: 2023/05/13 21:16:04 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/06/06 14:35:30 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-# define ANSI_COLOR_RED "\x1b[31m"
-# define ANSI_COLOR_RESET "\x1b[0m"
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}	t_list;
-
-typedef struct s_memblock
-{
-	void	*address;
-	size_t	size;
-	size_t	used_space;
-}	t_memblock;
-
-t_memblock	*ft_memblock_init(size_t size);
 int			ft_toupper(int c);
 int			ft_tolower(int c);
 char		*ft_strchr(const char *s, int c);
@@ -69,6 +52,26 @@ void		ft_putchar_fd(char c, int fd);
 void		ft_putstr_fd(char *s, int fd);
 void		ft_putendl_fd(char *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
+void		*ft_realloc(void *ptr, size_t size);
+char		*ft_strtok(char *str, const char *delim);
+
+# ifndef ANSI_COLOR_RED
+#  define ANSI_COLOR_RED "\x1b[31m"
+# endif
+# ifndef ANSI_COLOR_RESET
+#  define ANSI_COLOR_RESET "\x1b[0m"
+# endif
+
+// Careful, does not reproduce the behaviour of standard lib's perror
+// This is a different function
+void		ft_perror(char const *message);
+
+// Linked lists
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 t_list		*ft_lstnew(void *content);
 void		ft_lstadd_front(t_list **lst, t_list *new);
 int			ft_lstsize(t_list *lst);
@@ -78,14 +81,9 @@ void		ft_lstdelone(t_list *lst, void (*del)(void*));
 void		ft_lstclear(t_list **lst, void (*del)(void *));
 void		ft_lstiter(t_list *lst, void (*f)(void *));
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-void		*ft_realloc(void *ptr, size_t size);
-void		*ft_memblock_add(t_memblock *block, size_t size);
-void		ft_memblock_free(t_memblock *block);
-void		ft_print_error(char const *message);
-char		*ft_strtok(char *str, const char *delim);
+
 // printf
 int			ft_printf_str(char *str);
-int			ft_printf_nbr(int nbr);
 int			ft_printf_uint(unsigned int nbr);
 int			ft_printf_ptr(void *ptr);
 int			ft_printf_hex(unsigned int nbr, char fmt);
