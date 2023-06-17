@@ -3,7 +3,7 @@ The libft library is a collection of general purpose functions designed to be us
 
 ## Usage
 To compile the library using its Makefile:  
-`make -C /path/to/library`
+`make -C /path/to/libft`
 
 Include the header file libft.h in your C source code.  
 `#include "libft.h"`
@@ -11,9 +11,7 @@ Include the header file libft.h in your C source code.
 To compile your programs with the library:  
 `cc file.c -I/path/to/libft/include -L/path/to/libft -lft`
 
-## Docs
-To install the man pages:  
-`sudo mkdir /usr/local/man/man3`  
-`sudo cp docs/man3/*.3 /usr/local/man/man3`  
-
-`man libft`
+## Install
+Alternatively, libft can be installed in */usr/local/* :  
+`sudo cp libft.a /usr/local/lib`  
+`sudo cp libft.h /usr/local/include`
