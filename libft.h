@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: liguyon <liguyon@student.42lehavre.fr>     +#+  +:+       +#+        */
+/*   By: liguyon <ligyuon@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 11:36:48 by liguyon           #+#    #+#             */
-/*   Updated: 2023/06/06 14:35:30 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/07/10 12:48:40 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,10 +61,6 @@ char		*ft_strtok(char *str, const char *delim);
 # ifndef ANSI_COLOR_RESET
 #  define ANSI_COLOR_RESET "\x1b[0m"
 # endif
-
-// Careful, does not reproduce the behaviour of standard lib's perror
-// This is a different function
-void		ft_perror(char const *message);
 
 // Linked lists
 typedef struct s_list

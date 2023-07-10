@@ -4,4 +4,3 @@ test*
 *.a
 *.o
 main.c
-docs/man3/*.md

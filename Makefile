@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: liguyon <liguyon@student.42lehavre.fr>     +#+  +:+       +#+         #
+#    By: liguyon <ligyuon@student.42lehavre.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/11 11:03:52 by liguyon           #+#    #+#              #
-#    Updated: 2023/06/06 15:05:05 by liguyon          ###   ########.fr        #
+#    Updated: 2023/07/10 12:53:02 by liguyon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 NAME		:= libft.a
 
 # Includes
-INC_DIR		:= include
+INC_DIR		:= .
 
 # Sources
 SRC_DIR		:= src
@@ -53,24 +53,23 @@ SRC_		:= stdlib/ft_calloc.c \
 		   ctype/ft_isprint.c \
 		   ctype/ft_tolower.c \
 		   ctype/ft_toupper.c \
-		   stdio/ft_print_error.c \
 		   stdio/ft_putchar_fd.c \
 		   stdio/ft_putendl_fd.c \
 		   stdio/ft_putnbr_fd.c \
 		   stdio/ft_putstr_fd.c \
-		   datastruct/ft_lstnew.c \
-		   datastruct/ft_lstadd_front.c \
-		   datastruct/ft_lstsize.c \
-		   datastruct/ft_lstlast.c \
-		   datastruct/ft_lstadd_back.c \
-		   datastruct/ft_lstdelone.c \
-		   datastruct/ft_lstclear.c \
-		   datastruct/ft_lstiter.c \
-		   datastruct/ft_lstmap.c \
 		   stdio/ft_printf_hex.c \
 		   stdio/ft_printf_ptr.c \
 		   stdio/ft_printf_uint.c \
 		   stdio/ft_printf.c \
+		   datastruct/linked-list/ft_lstnew.c \
+		   datastruct/linked-list/ft_lstadd_front.c \
+		   datastruct/linked-list/ft_lstsize.c \
+		   datastruct/linked-list/ft_lstlast.c \
+		   datastruct/linked-list/ft_lstadd_back.c \
+		   datastruct/linked-list/ft_lstdelone.c \
+		   datastruct/linked-list/ft_lstclear.c \
+		   datastruct/linked-list/ft_lstiter.c \
+		   datastruct/linked-list/ft_lstmap.c \
 
 SRC			:= $(addprefix $(SRC_DIR)/, $(SRC_))
 
@@ -104,4 +103,4 @@ fclean:	clean
 
 re: 		fclean all
 
-.PHONY: 	all bonus clean fclean re
+.PHONY: 	all clean fclean re
