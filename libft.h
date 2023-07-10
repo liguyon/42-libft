@@ -6,7 +6,7 @@
 /*   By: liguyon <ligyuon@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 11:36:48 by liguyon           #+#    #+#             */
-/*   Updated: 2023/07/10 18:01:07 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/07/10 18:43:32 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,11 +82,11 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 int			ft_printf(const char *fmt, ...);
 
 // LOGGER
-void	logger_orgn(char *file, int line);
-void	logger_debg(char *msg);
-void	logger_info(char *msg);
-void	logger_warn(char *msg);
-void	logger_erro(char *msg);
-void	logger_crit(char *msg);
+void		logger_orgn(char *file, int line);
+void		logger_debg(char *msg);
+void		logger_info(char *msg);
+void		logger_warn(char *msg);
+void		logger_erro(char *msg);
+void		logger_crit(char *msg);
 
 #endif
