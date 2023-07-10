@@ -6,7 +6,7 @@
 /*   By: liguyon <ligyuon@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 11:36:48 by liguyon           #+#    #+#             */
-/*   Updated: 2023/07/10 12:48:40 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/07/10 13:01:26 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,14 +55,13 @@ void		ft_putnbr_fd(int n, int fd);
 void		*ft_realloc(void *ptr, size_t size);
 char		*ft_strtok(char *str, const char *delim);
 
-# ifndef ANSI_COLOR_RED
-#  define ANSI_COLOR_RED "\x1b[31m"
-# endif
-# ifndef ANSI_COLOR_RESET
-#  define ANSI_COLOR_RESET "\x1b[0m"
-# endif
+/*
+================================================================================
 
-// Linked lists
+LINKED LISTS
+
+================================================================================
+*/
 typedef struct s_list
 {
 	void			*content;
@@ -78,7 +77,13 @@ void		ft_lstclear(t_list **lst, void (*del)(void *));
 void		ft_lstiter(t_list *lst, void (*f)(void *));
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
-// printf
+/*
+================================================================================
+
+PRINTF
+
+================================================================================
+*/
 int			ft_printf_str(char *str);
 int			ft_printf_uint(unsigned int nbr);
 int			ft_printf_ptr(void *ptr);

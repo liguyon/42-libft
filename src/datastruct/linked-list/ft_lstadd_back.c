@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: liguyon <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: liguyon <ligyuon@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 17:09:21 by liguyon           #+#    #+#             */
-/*   Updated: 2023/04/17 17:13:44 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/07/10 13:01:55 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 
 	temp = *lst;
 	if (lst && temp)
-	{	
+	{
 		while (temp->next != NULL)
 			temp = temp->next;
 		temp->next = new;
