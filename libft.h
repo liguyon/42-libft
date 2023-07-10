@@ -6,7 +6,7 @@
 /*   By: liguyon <ligyuon@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 11:36:48 by liguyon           #+#    #+#             */
-/*   Updated: 2023/07/10 13:01:26 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/07/10 18:01:07 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdbool.h>
 
 int			ft_toupper(int c);
 int			ft_tolower(int c);
@@ -77,17 +78,15 @@ void		ft_lstclear(t_list **lst, void (*del)(void *));
 void		ft_lstiter(t_list *lst, void (*f)(void *));
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
-/*
-================================================================================
-
-PRINTF
-
-================================================================================
-*/
-int			ft_printf_str(char *str);
-int			ft_printf_uint(unsigned int nbr);
-int			ft_printf_ptr(void *ptr);
-int			ft_printf_hex(unsigned int nbr, char fmt);
+// PRINTF
 int			ft_printf(const char *fmt, ...);
+
+// LOGGER
+void	logger_orgn(char *file, int line);
+void	logger_debg(char *msg);
+void	logger_info(char *msg);
+void	logger_warn(char *msg);
+void	logger_erro(char *msg);
+void	logger_crit(char *msg);
 
 #endif

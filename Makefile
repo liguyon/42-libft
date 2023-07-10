@@ -6,7 +6,7 @@
 #    By: liguyon <ligyuon@student.42lehavre.fr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/11 11:03:52 by liguyon           #+#    #+#              #
-#    Updated: 2023/07/10 12:53:02 by liguyon          ###   ########.fr        #
+#    Updated: 2023/07/10 18:02:11 by liguyon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,6 +70,8 @@ SRC_		:= stdlib/ft_calloc.c \
 		   datastruct/linked-list/ft_lstclear.c \
 		   datastruct/linked-list/ft_lstiter.c \
 		   datastruct/linked-list/ft_lstmap.c \
+		   logger/logger.c \
+		   logger/logger_err.c \
 
 SRC			:= $(addprefix $(SRC_DIR)/, $(SRC_))
 

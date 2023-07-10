@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_hex.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: liguyon <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: liguyon <ligyuon@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 20:52:53 by liguyon           #+#    #+#             */
-/*   Updated: 2023/04/26 16:22:06 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/07/10 17:11:21 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf_internal.h"
 #include "libft.h"
 
 static int	itohex_len(unsigned int n)

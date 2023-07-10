@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_ptr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: liguyon <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: liguyon <ligyuon@student.42lehavre.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 20:53:02 by liguyon           #+#    #+#             */
-/*   Updated: 2023/04/26 15:15:08 by liguyon          ###   ########.fr       */
+/*   Updated: 2023/07/10 17:11:46 by liguyon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf_internal.h"
 #include "libft.h"
 #include <inttypes.h>
 
